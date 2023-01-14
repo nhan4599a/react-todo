@@ -1,3 +1,7 @@
+function onSidebarToggleButtonClick() {
+	document.querySelector('body')!.classList.toggle('toggle-sidebar');
+}
+
 const Header: React.FC<{}> = () => (
 	<header id="header" className="header fixed-top d-flex align-items-center">
 
@@ -6,7 +10,7 @@ const Header: React.FC<{}> = () => (
 				<img src="/assets/images/logo.png" alt="" />
 				<span className="d-none d-lg-block">Todo App</span>
 			</a>
-			<i className="bi bi-list toggle-sidebar-btn"></i>
+			<i className="bi bi-list toggle-sidebar-btn" onClick={onSidebarToggleButtonClick}></i>
 		</div>
 
 		<div className="search-bar">
